@@ -1,0 +1,43 @@
+<!--pages/home/home.wxml-->
+<view class="header">
+  <view class="header_img">
+    <image class="assisstant_img" src="/images/happy.png"></image> 
+  </view>
+  <span class="header_content">
+    1 Day 1 APP
+  </span>
+</view>
+
+<!-- 点击的时候整个框是灰色 待解决 -->
+<navigator url="../article/article1?title=幕布">
+  <view class="recommend">
+    <view class="recommend_item">
+      <image class="recommend_img" src="/images/recommend/mubu.png"></image>
+    </view>
+    <view class="recommend_title">
+      幕布
+    </view>
+    <view class="recommend_txt">
+      <text>极简大纲笔记\n一键生成思维导图</text>
+    </view>
+  </view>
+</navigator>  
+<view class="fenge">
+  <image id="history_index" src="/images/recommend/more.png"></image>
+  往期精彩
+</view>
+
+<view class="history">
+  <block wx:for="{{data_detail}}">
+    <view class="history_box">
+      <navigator url="../article/article1?title={{item.name}}">
+        <view class="history_item">
+          <image class="history_img" src="{{item.img}}"></image>
+        </view>
+      </navigator>  
+      <view class="history_txt">
+        {{item.name}}
+      </view>
+    </view>
+  </block>  
+</view>

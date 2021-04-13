@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/recommend/recommend",
+    "pages/me/me",
+    "pages/find/find",
+    "pages/page1/page1",
+    "pages/article/article1"
+  ],
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#000000",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/happy2.png",
+        "pagePath": "pages/home/home",
+        "text": "home"
+      },
+      {
+        "iconPath": "/images/find.png",
+        "selectedIconPath": "/images/happy2.png",
+        "pagePath": "pages/find/find",
+        "text": "发现"
+      },
+      {
+        "iconPath": "/images/recommend.png",
+        "selectedIconPath": "/images/happy2.png",
+        "pagePath": "pages/recommend/recommend",
+        "text": "推荐"
+      },
+      {
+        "iconPath": "/images/me.png",
+        "selectedIconPath": "/images/happy2.png",
+        "pagePath": "pages/me/me",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "使用小助手",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

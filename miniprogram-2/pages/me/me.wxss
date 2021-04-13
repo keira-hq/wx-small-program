@@ -1,0 +1,44 @@
+.account_img{
+  float:right;
+  margin-right:100rpx;
+}
+
+.me{
+  width:620rpx;
+  margin-top:20rpx;
+  margin-left:50rpx;
+  /* border:1rpx solid black; */
+}
+
+.line{
+  height:5rpx;
+  width:750rpx;
+  background-color:gray;
+  clear:both;
+}
+.me_item{
+  height:110rpx;
+  border-bottom:1rpx solid grey;
+}
+
+.me_img{
+  padding-top:15rpx;
+  width:70rpx;
+  height:70rpx;
+  float:left;
+}
+.me_txt{
+  font-size:1.3rem;
+  width:500rpx;
+  padding-top:30rpx;
+  padding-left:130rpx;
+  /* border:1rpx solid black; */
+
+}
+.jiantou{
+  /* border:1rpx solid black; */
+  margin-top:30rpx;
+  float: right;
+  width: 50rpx;
+  height: 50rpx;
+}

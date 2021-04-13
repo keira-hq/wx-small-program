@@ -1,0 +1,37 @@
+
+.hearder{
+  position:absolute;
+  top:0;
+  height: 300rpx;
+}
+
+.body{
+  position:absolute;
+  top:300rpx;
+  bottom:0rpx;
+  overflow-y:scroll;
+}
+
+.index{
+  margin-top:20rpx;
+  width:700rpx;
+  height:60rpx;
+  /* background-color: silver; */
+}
+
+.index_link{
+  display: inline-block;
+  width:175rpx;
+  box-sizing: border-box;
+  color:#808080;
+  padding-left:20rpx;
+  /* border:1rpx solid black; */
+}
+
+
+.article_img{
+  width:130rpx;
+  height:130rpx;
+  margin:60rpx 60rpx 0rpx 60rpx;
+  /* border:1rpx solid black; */
+}

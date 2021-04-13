@@ -1,0 +1,38 @@
+<!--pages/home/home.wxml-->
+<view class="header">
+  <view class="header_img">
+    <image class="assisstant_img" src="/images/happy.png"></image> 
+  </view>
+  <span class="header_content">
+    Hi,
+  </span>
+  <view class="account_img">
+    <image class="assisstant_img" src="/images/home/people.png"></image> 
+  </view>
+</view>
+
+<view class="line"></view>
+
+<view class="me">
+  <view class="me_item">
+     <image class="me_img" src="/images/me/shoucang.png"></image>
+     <image class="jiantou" src="/images/me/jiantou.png"></image>
+     <view class="me_txt">收藏</view>
+     
+  </view>
+  <view class="me_item">
+     <image class="me_img" src="/images/me/message.png"></image>
+     <image class="jiantou" src="/images/me/jiantou.png"></image>
+     <view class="me_txt">消息</view>
+  </view>
+  <view class="me_item">
+     <image class="me_img" src="/images/me/setting.png"></image>
+     <image class="jiantou" src="/images/me/jiantou.png"></image>
+     <view class="me_txt">设置</view>
+  </view>
+  <view class="me_item">
+     <image class="me_img" src="/images/me/feedback.png"></image>
+     <image class="jiantou" src="/images/me/jiantou.png"></image>
+     <view class="me_txt">反馈</view>
+  </view>
+</view>

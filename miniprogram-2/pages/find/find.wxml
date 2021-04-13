@@ -1,0 +1,36 @@
+
+        <!-- #header , #footer{
+            height: 50px;
+            background: #ddd;
+            position: absolute;
+            width: 100%;
+        }
+        #header{
+            top: 0;
+        }
+        #footer{
+            bottom: 0;
+        }
+        #content{
+            width: 100%;
+            position: absolute;
+            top: 50px;
+            bottom: 50px;
+            overflow-y: auto;
+        }
+    </style> -->
+<view class="header">
+  <view class="header_img">
+    <image class="assisstant_img" src="/images/happy.png"></image> 
+  </view>
+  <span class="header_content">
+    Find something interesting
+  </span>
+</view>
+
+<view class="b">
+    <view ><image class="share" src="/images/share.png"></image></view>
+    <view ><image class="share" src="/images/share.png"></image></view>
+    <view ><image class="share" src="/images/share.png"></image></view>
+    <view ><image class="share" src="/images/share.png"></image></view>
+</view>

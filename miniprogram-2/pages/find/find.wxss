@@ -1,0 +1,13 @@
+
+.b{
+  width:100%;
+  top:140rpx;
+  bottom:0rpx;
+  position:absolute;
+  overflow-y:scroll;
+}
+.share{
+  width:620rpx;
+  height:300rpx;
+  margin-left:50rpx;
+}

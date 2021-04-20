@@ -28,8 +28,9 @@ App({
            'content-type': 'application/json' //默认值
          },
          success: (res) => {
+           console.log("code发送成功")
            console.log(res.data)
-          //  wx.setStorageSync('uid', res.data.uid)
+           wx.setStorageSync('userid', res.data.userid)
          }
        })
      }

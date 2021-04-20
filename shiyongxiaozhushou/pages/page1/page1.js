@@ -13,7 +13,8 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success(res){
-        console.log("成功"+res.data)
+        console.log("取数据成功")
+        console.log(res.data)
         that.setData({
           datalist: res.data.data
         })
@@ -21,9 +22,10 @@ Page({
     })
   },
   goDetail(event){
-    console.log("点击获取的数据",event.currentTarget.dataset.id)
+    console.log("点击事件")
+    console.log(event.currentTarget)
     wx.navigateTo({
-      url: '/pages/article/article1?id='+event.currentTarget.dataset.id,
+      url: '/pages/article/article1?id='+event.currentTarget.dataset.articleid,
     })
   }
 })

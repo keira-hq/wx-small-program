@@ -1,0 +1,5 @@
+/* article/article1.wxss */
+.article-img{
+  width: 100rpx;
+  height: 100rpx;
+}

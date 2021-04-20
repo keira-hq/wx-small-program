@@ -23,7 +23,7 @@
 
 <view class="body">
   <block wx:for="{{datalist}}" wx:key="index">
-    <view class="itemroot" bindtap="goDetail" data-id="{{item.articleid}}">
+    <view class="article" bindtap="goDetail" data-articleid="{{item.articleid}}">
       <view class='article_item'>
         <image class="article_img" src="{{item.pic}}"></image> 
       </view>

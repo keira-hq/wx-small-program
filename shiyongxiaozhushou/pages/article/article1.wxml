@@ -1,0 +1,9 @@
+<view>
+  <view>{{detail.title}}</view>
+  <view>{{detail.content}}</view>
+</view>
+
+<image class="article-img" src="{{imgUrl}}" bindtap="clickMe">
+</image>
+<image class="article-img" src="{{dianzanUrl}}" bindtap="clickMe2">
+</image>

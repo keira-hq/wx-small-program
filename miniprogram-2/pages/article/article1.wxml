@@ -1,4 +1,0 @@
-<view>
-  <view>{{detail.title}}</view>
-  <view>{{detail.content}}</view>
-</view>

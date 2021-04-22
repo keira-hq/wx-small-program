@@ -7,10 +7,14 @@ Page({
   
   onLoad(){
     let that = this;
+    let userid = (wx.getStorageSync('userid') || ('err'))
     wx.request({
       url: 'https://20210330.keirahq.com/getpagelist',
       header: {
         'content-type': 'application/json' // 默认值
+      },
+      data:{
+        userid:userid
       },
       success(res){
         console.log("取数据成功")

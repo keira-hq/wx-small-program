@@ -31,6 +31,7 @@ App({
            console.log("code发送成功")
            console.log(res.data)
            wx.setStorageSync('userid', res.data.userid)
+
          }
        })
      }

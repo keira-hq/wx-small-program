@@ -23,19 +23,23 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       data:{
-        id: articleid
+        articleid: articleid,
+        userid:userid
       },
       success(res){
         console.log("detail成功")
         console.log(res.data)
-        shoucang = res.data.data[0].shoucang
-        dianzan = res.data.data[0].dianzan
-        console.log("收藏："+shoucang,dianzan)
         that.setData({
-          detail: res.data.data[0],
-          dianzanUrl:dianzan==0?"../../images/dianzan-no.png":"../../images/dianzan-yes.png",
-          imgUrl:shoucang==0?"../../images/shoucang-no.png":"../../images/shoucang-yes.png"
+          detail: res.data.detail[0]
         })
+        // shoucang = res.data.data[0].shoucang
+        // dianzan = res.data.data[0].dianzan
+        // console.log("收藏："+shoucang,dianzan)
+        // that.setData({
+        //   detail: res.data.data[0],
+        //   dianzanUrl:dianzan==0?"../../images/dianzan-no.png":"../../images/dianzan-yes.png",
+        //   imgUrl:shoucang==0?"../../images/shoucang-no.png":"../../images/shoucang-yes.png"
+        // })
       },
     })
   },

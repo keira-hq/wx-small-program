@@ -30,7 +30,7 @@
       <view class="article_txt">
         <view class="article_title"> {{item.title}}</view>
         <view class="article_date">
-          {{item.date}}
+          {{item.date}}\t{{item.view_sum}}
           <image class="favorites" src="/images/favorites.png"></image>
         </view>
       </view>

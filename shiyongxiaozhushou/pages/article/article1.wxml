@@ -3,7 +3,7 @@
   <view>{{detail.content}}</view>
 </view>
 
-<image class="article-img" src="{{imgUrl}}" bindtap="clickMe">
+<image class="article-img" src="{{imgUrl}}" bindtap="clickMe" data-articleid="{{detail.articleid}}">
 </image>
-<image class="article-img" src="{{dianzanUrl}}" bindtap="clickMe2">
+<image class="article-img" src="{{dianzanUrl}}" bindtap="clickMe2" data-articleid="{{detail.articleid}}">
 </image>

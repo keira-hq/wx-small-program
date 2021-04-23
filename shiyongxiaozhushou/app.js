@@ -30,8 +30,8 @@ App({
          success: (res) => {
            console.log("code发送成功")
            console.log(res.data)
+           //将其放在缓存中
            wx.setStorageSync('userid', res.data.userid)
-
          }
        })
      }

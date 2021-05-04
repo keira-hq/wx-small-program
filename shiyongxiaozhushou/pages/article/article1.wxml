@@ -1,9 +1,23 @@
-<view>
-  <view>{{detail.title}}</view>
-  <view>{{detail.content}}</view>
+
+<view class="title">{{detail.title}}</view>
+<view class="articleinfo">
+  <span class="yuanchuang">{{detail.yuanchuang}}</span>
+  <span class="author">{{detail.author}}</span>
+  <span class="date">{{detail.date}}</span>
 </view>
 
-<image class="article-img" src="{{imgUrl}}" bindtap="clickMe" data-articleid="{{detail.articleid}}">
-</image>
-<image class="article-img" src="{{dianzanUrl}}" bindtap="clickMe2" data-articleid="{{detail.articleid}}">
-</image>
+<view class="content">{{detail.content}}</view>
+
+<view class="article-foot">
+  <span class="foot-txt">阅读</span>
+  <span>345</span>
+  <image class="foot-img" id="shoucang-img" src="{{imgUrl}}" bindtap="clickMe" data-articleid="{{detail.articleid}}">
+  </image>
+  <span class="foot-txt">收藏</span>
+  <span>34</span>
+  <image class="foot-img" src="{{dianzanUrl}}" bindtap="clickMe2" data-articleid="{{detail.articleid}}">
+  </image>
+  <span class="foot-txt">赞</span>
+  <span>782</span>
+</view>
+

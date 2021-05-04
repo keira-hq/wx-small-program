@@ -13,14 +13,13 @@
   <view class="search-box">
     <input class="input" type="text" placeholder="search"/>
   </view>
-  <view class="index">
-    <html class="index_link" src="huhuhu" style="color:black;font-weight:600">APP</html>
-    <html class="index_link"  src="huhuhu">软件</html>
-    <html class="index_link"  src="huhuhu">设备</html>
-    <html class="index_link"  src="huhuhu">详细</html>
+  <view class="article_class">
+    <view class="class_txt {{classid==1?'active':''}}"   bindtap="goClass" data-classid="1">APP</view>
+    <view class="class_txt {{classid==2?'active':''}}"bindtap="goClass" data-classid="2">软件</view>
+    <view class="class_txt {{classid==3?'active':''}}"  bindtap="goClass" data-classid="3">设备</view>
   </view>
 </view>
-
+<view>{{classid}}</view>
 <view class="body">
   <block wx:for="{{datalist}}" wx:key="index">
     <view class="article" bindtap="goDetail" data-articleid="{{item.articleid}}">
@@ -29,9 +28,13 @@
       </view>
       <view class="article_txt">
         <view class="article_title"> {{item.title}}</view>
-        <view class="article_date">
-          {{item.date}}\t{{item.view_sum}}
-          <image class="favorites" src="/images/favorites.png"></image>
+        <view class="article_detail">
+          <image class="detail_img" src="/images/home/liulan.png"></image>
+          <span class="detail_txt" id="sum">{{item.view_sum}}</span>
+          <image class="detail_img" src="/images/home/shoucang.png"></image>
+          <span class="detail_txt">{{item.shoucang_sum}}</span>
+          <image class="detail_img" src="/images/home/dianzan.png"></image>
+          <span class="detail_txt" >{{item.dianzan_sum}}</span>
         </view>
       </view>
     </view>

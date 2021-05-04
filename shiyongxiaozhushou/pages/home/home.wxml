@@ -9,8 +9,12 @@
   <view class="search-box">
     <input class="input" type="text" placeholder="search"/>
   </view>
-  <view>
-    <view class="block" >
+
+  <view class="banner">
+    <navigator url="../page1/page1?classid=1" ><image class="banner_img" src="/images/banner.png"></image></navigator>
+  </view>
+</view>
+    <!-- <view class="block" >
       <view class="block_item" id="block1">
         <navigator url="../page1/page1?id=101" ><image class="block_img" src="/images/home/APP.png"></image></navigator>
       </view>
@@ -42,8 +46,8 @@
         详解
       </view>
     </view>
-  </view>
-</view>
+  </view> -->
+
 
 <view class="body">
 

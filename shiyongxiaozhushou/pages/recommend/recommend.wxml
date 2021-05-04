@@ -9,7 +9,7 @@
 </view>
 
 <!-- 点击的时候整个框是灰色 待解决 -->
-<navigator url="../article/article1?title=幕布">
+<navigator url="../article/article3?title=幕布">
   <view class="recommend">
     <view class="recommend_item">
       <image class="recommend_img" src="/images/recommend/mubu.png"></image>
@@ -30,7 +30,7 @@
 <view class="history">
   <block wx:for="{{data_detail}}">
     <view class="history_box">
-      <navigator url="../article/article1?title={{item.name}}">
+      <navigator url="../article/article3?title={{item.name}}">
         <view class="history_item">
           <image class="history_img" src="{{item.img}}"></image>
         </view>

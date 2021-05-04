@@ -5,7 +5,9 @@
     "pages/me/me",
     "pages/find/find",
     "pages/page1/page1",
-    "pages/article/article1"
+    "pages/article/article1",
+    "pages/article/article2",
+    "pages/article/article3"
   ],
   "tabBar": {
     "color": "#7A7E83",

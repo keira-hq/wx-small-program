@@ -50,7 +50,9 @@ app.get('/', function(req, res){
 app.get('/getpagelist', function(req, res){
     pool.getConnection(function(err, connection){
         let userid = req.query.userid;
-        let sql = "select articlelist.*,IFNULL(dianzanshoucang.shoucang,0) as shoucang,IFNULL(dianzanshoucang.dianzan,0) as dianzan from articlelist left join dianzanshoucang on articlelist.articleid = dianzanshoucang.articleid and dianzanshoucang.userid ="+userid;
+        let classid = req.query.classid;
+
+        let sql = "select articlelist.*,IFNULL(dianzanshoucang.shoucang,0) as shoucang,IFNULL(dianzanshoucang.dianzan,0) as dianzan from articlelist left join dianzanshoucang on articlelist.articleid = dianzanshoucang.articleid and dianzanshoucang.userid ="+userid+" where articlelist.classid= "+classid;
         console.log(sql);
         connection.query(sql,function(err, rows){
             if(err) {

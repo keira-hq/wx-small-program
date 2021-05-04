@@ -1,5 +1,59 @@
 /* article/article1.wxss */
-.article-img{
-  width: 100rpx;
-  height: 100rpx;
+.title{
+  /* background-color:blue; */
+  margin-left: 20rpx;
+  margin-right:20rpx;
+  font-size:1.4rem;
+  font-weight: 350;
+  color:#333333;
+}
+
+.articleinfo{
+  margin:20rpx 20rpx 40rpx 20rpx;
+  font-weight: 400;
+  color:#B2B2B2;
+}
+
+.yuanchuang{
+  background-color:#F2F2F2;
+  padding:5rpx 20rpx;
+  font-size:0.9rem;
+}
+.author{
+  margin-left:30rpx;
+  margin-right:30rpx;
+  color:#576B95;
+  font-weight:500;
+}
+
+.content{
+  margin:0 20rpx;
+}
+.article-foot{
+  box-sizing: border-box;
+  margin:50rpx 20rpx 20rpx 20rpx;
+  color:#576B95;
+  /* background-color: yellow; */
+  height:60rpx;
+  font-size:1.1rem;
+}
+.foot-txt{
+  margin-right:10rpx;
+}
+.foot-img{
+  position: relative;
+  top:5rpx;
+  padding-left:10rpx;
+  width: 40rpx;
+  height: 40rpx;
+  margin:0 20rpx;
+}
+#shoucang-img{
+  padding-left:110rpx;
+}
+
+.content{
+  padding:0 20rpx;
+  font-size:1rem;
+  color:#333333;
 }

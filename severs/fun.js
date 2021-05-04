@@ -75,6 +75,28 @@ function getOpenId(req, res){
     })
 }
 
+//获取首页文章列表
+function gethomelist(req,res) {
+    pool.getConnection(function(err, connection){
+        let sql = "select * from articlelist order by date DESC limit 5"
+        console.log(sql);
+        connection.query(sql,function(err, rows){
+            if(err) {
+                throw err;
+            }else{
+                let result = {
+                    "status": "200",
+                    "success": true,
+                }
+                result.data=rows;
+                console.log( rows );
+                res.json(result);
+            }
+        });
+        connection.release();
+    });
+}
+
 //获取文章列表
 function getpagelist(req,res) {
     pool.getConnection(function(err, connection){
@@ -243,6 +265,7 @@ function changestatus2(req,res) {
 
 exports.getOpenId = getOpenId;
 exports.getpagelist = getpagelist;
+exports.gethomelist = gethomelist;
 exports.getpagedetail = getpagedetail;
 exports.changestatus1 = changestatus1;
 exports.changestatus2 = changestatus2;

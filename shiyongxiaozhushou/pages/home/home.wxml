@@ -14,57 +14,22 @@
     <navigator url="../page1/page1?classid=1" ><image class="banner_img" src="/images/banner.png"></image></navigator>
   </view>
 </view>
-    <!-- <view class="block" >
-      <view class="block_item" id="block1">
-        <navigator url="../page1/page1?id=101" ><image class="block_img" src="/images/home/APP.png"></image></navigator>
-      </view>
-      <view class="block_txt">
-      APP
-      </view>
-    </view>
-    <view class="block" >
-      <view class="block_item" id="block2">
-        <navigator url="../page1/page1?id=101" ><image class="block_img" src="/images/home/software.png"></image></navigator>
-      </view>
-      <view class="block_txt">
-        软件
-      </view>
-    </view>
-    <view class="block" >
-      <view class="block_item" id="block3">
-        <navigator url="../page1/page1?id=101" ><image class="block_img" src="/images/home/devices.png"></image></navigator>
-      </view>
-      <view class="block_txt">
-        设备
-      </view>
-    </view>
-    <view class="block" >
-      <view class="block_item" id="block4">
-        <navigator url="../page1/page1?id=101" ><image class="block_img" src="/images/home/old.png"></image></navigator>
-      </view>
-      <view class="block_txt">
-        详解
-      </view>
-    </view>
-  </view> -->
-
+    
 
 <view class="body">
 
   <view calss="article_area">
-    <block wx:for="{{data_detail}}">
-      <navigator url="../article/article1?title={{item.title}}" >
-        <view class="article">
-          <view class="article_item">
-            <image class="article_img" src="{{item.img}}"></image>
-          </view>
-          <view class="article_txt">
-            <view class="article_title">{{item.title}}</view> 
-            <view class="article_date">{{item.date}}</view> 
-            <image class="favorites" src="/images/favorites.png"></image>
-          </view>
+    <block wx:for="{{datalist}}" wx:key="index">
+      <view class="article" bindtap="goDetail" data-articleid="{{item.articleid}}">
+        <view class="article_item">
+          <image class="article_img" src="{{item.homepic}}"></image>
         </view>
-      </navigator>    
+        <view class="article_txt">
+          <view class="article_title">{{item.title}}</view> 
+          <view class="article_date">{{item.date}}</view> 
+          <view class="view">阅读:1{{item.view_sum}}</view>
+        </view>
+      </view>   
     </block>
   </view>
 

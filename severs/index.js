@@ -35,6 +35,8 @@ app.get('/', function(req, res){
 
 //获取openid
 app.post('/getopenid', fun.getOpenId)
+//获取首页文章列表
+app.get('/gethomelist', fun.gethomelist)
 //获取文章列表
 app.get('/getpagelist', fun.getpagelist)
 //获取具体的文章内容

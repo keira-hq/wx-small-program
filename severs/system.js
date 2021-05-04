@@ -6,7 +6,7 @@ const pool = mysql.createPool({
     port: 3306,
     database: 'wxxcx',
     user: 'wxxcx',
-    password: 'wxxcx977082'
+    password: '*****'
 });
 
 // 配置 https

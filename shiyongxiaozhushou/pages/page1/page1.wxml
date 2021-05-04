@@ -1,8 +1,3 @@
-<!-- pages/page1/page1.wxml-->
-<!-- <text>{{id}}</text>
-<view bindtap="aaa">
-  点我
-</view> -->
 <view class="header">
   <view class="header_img">
     <image class="assisstant_img" src="/images/happy.png"></image> 

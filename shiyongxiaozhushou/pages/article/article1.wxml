@@ -10,14 +10,14 @@
 
 <view class="article-foot">
   <span class="foot-txt">阅读</span>
-  <span>345</span>
+  <span>{{detail.view_sum}}</span>
   <image class="foot-img" id="shoucang-img" src="{{imgUrl}}" bindtap="clickMe" data-articleid="{{detail.articleid}}">
   </image>
   <span class="foot-txt">收藏</span>
-  <span>34</span>
+  <span>{{detail.shoucang_sum}}</span>
   <image class="foot-img" src="{{dianzanUrl}}" bindtap="clickMe2" data-articleid="{{detail.articleid}}">
   </image>
   <span class="foot-txt">赞</span>
-  <span>782</span>
+  <span>{{detail.dianzan_sum}}</span>
 </view>
 

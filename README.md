@@ -19,7 +19,7 @@
   + 文章页面的排版
 * 第八周
   + 页面2的导航栏和三个分区的list展示
-  + 方法的封装 [老师的教程](https://gitee.com/OSABC/webdev/blob/master/Doc/NodeJS_%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9D%97.md)
+  + 方法的封装:方法写在了fun.js中 系统的一些配置写在system.js中 [老师的教程](https://gitee.com/OSABC/webdev/blob/master/Doc/NodeJS_%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9D%97.md)
 ### 后续开发任务
 * 图片全部放在服务器上
 * 服务器pm2

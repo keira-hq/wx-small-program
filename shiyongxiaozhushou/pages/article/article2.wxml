@@ -1,2 +1,33 @@
 <!--pages/article/article2.wxml-->
-<text>pages/article/article2.wxml</text>
+<view class="header">
+  <view class="header_img">
+    <image class="assisstant_img" src="/images/happy.png"></image> 
+  </view>
+  <span class="header_content">
+    My favorites
+  </span>
+  <view class="account_img">
+    <image class="assisstant_img" src="/images/home/people.png"></image> 
+  </view>
+  <view class="search-box">
+    <input class="input" type="text" placeholder="search"/>
+  </view>
+</view>
+
+<view class="body">
+  <block wx:for="{{datalist}}" wx:key="index">
+    <view class="article" bindtap="goDetail" data-articleid="{{item.articleid}}">
+      <view class='article_item'>
+        <image class="article_img" src="{{item.pic}}"></image> 
+      </view>
+      <view class="article_txt">
+        <view class="article_title"> {{item.title}}</view>
+        <view class="article_detail">
+          <view class="detail_txt">{{item.yuanchuang}}:{{item.author}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+

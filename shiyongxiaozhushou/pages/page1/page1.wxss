@@ -46,22 +46,7 @@
 
 .article_detail{
   color:#808080;
-  display:flex;
-
-}
-.detail_img{
-  width: 40rpx;
-  height:40rpx;
-  padding-right:5rpx;
-  /* background-color:indianred; */
+  font: size 0.9rem;
 }
 
-.detail_txt{
-  width:70rpx;
-  /* background-color:hotpink; */
-  vertical-align: middle;
-}
 
-#sum{
-  width:85rpx;
-}

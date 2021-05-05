@@ -121,6 +121,29 @@ function getpagelist(req,res) {
         connection.release();
     });
 }
+
+//获取收藏列表
+function getshoucanglist(req,res) {
+    pool.getConnection(function(err, connection){
+        let userid = req.query.userid;
+        let sql = "select articlelist.* ,IFNULL(dianzanshoucang.shoucang,0) as shoucang,IFNULL(dianzanshoucang.dianzan,0) as dianzan from articlelist left join dianzanshoucang on articlelist.articleid = dianzanshoucang.articleid and dianzanshoucang.userid ="+userid+" where dianzanshoucang.shoucang = 1 order by stime DESC";
+        console.log(sql);
+        connection.query(sql,function(err, rows){
+            if(err) {
+                throw err;
+            }else{
+                let result = {
+                    "status": "200",
+                    "success": true,
+                }
+                result.data=rows;
+                console.log( rows );
+                res.json(result);
+            }
+        });
+        connection.release();
+    });
+}
 //获取具体的文章内容
 function getpagedetail(req,res) {
     pool.getConnection(function(err, connection){
@@ -200,7 +223,7 @@ function changestatus1(req,res) {
         let userid =req.query.userid;
         let shoucang = req.query.shoucang;
         let articleid = req.query.articleid;
-        let sql = "UPDATE `dianzanshoucang` SET `shoucang` = "+ shoucang +" where dianzanshoucang.articleid = " + articleid + " and dianzanshoucang.userid =" + userid;
+        let sql = "UPDATE `dianzanshoucang` SET `shoucang` = "+ shoucang +", stime = now()  where dianzanshoucang.articleid = " + articleid + " and dianzanshoucang.userid =" + userid;
         console.log(sql);
         connection.query(sql,function(err, rows){
             if(err) {
@@ -213,13 +236,21 @@ function changestatus1(req,res) {
                     if (err) {
                         throw err;
                     } else {
-                        console.log(rows);
-                        let result={
-                            "status":"200",
-                            "success":true
-                        }
-                        result.C1 = rows;
-                        res.json(result);
+                        let sql = "select * from articlelist where articleid = "+articleid;
+                        console.log(sql);
+                        connection.query(sql, function (err, rows) {
+                            if (err) {
+                                throw err;
+                            } else {
+                                let result = {
+                                    "status": "200",
+                                    "success": true
+                                }
+                                result.c1 = rows;
+                                console.log(rows);
+                                res.json(result);
+                            }
+                        });
                     }
                 });
             }
@@ -235,7 +266,7 @@ function changestatus2(req,res) {
         let userid =req.query.userid;
         let dianzan = req.query.dianzan;
         let articleid = req.query.articleid;
-        let sql = "UPDATE `dianzanshoucang` SET `dianzan` = "+ dianzan +" where dianzanshoucang.articleid = " + articleid + " and dianzanshoucang.userid =" + userid;
+        let sql = "UPDATE dianzanshoucang SET dianzan = "+ dianzan +" where dianzanshoucang.articleid = " + articleid + " and dianzanshoucang.userid =" + userid;
         console.log(sql);
         connection.query(sql,function(err, rows){
             if(err) {
@@ -248,13 +279,21 @@ function changestatus2(req,res) {
                     if (err) {
                         throw err;
                     } else {
-                        console.log(rows);
-                        let result={
-                            "status":"200",
-                            "success":true
-                        }
-                        result.C2 = rows;
-                        res.json(result);
+                        let sql = "select * from articlelist where articleid = "+articleid;
+                        console.log(sql);
+                        connection.query(sql, function (err, rows) {
+                            if (err) {
+                                throw err;
+                            } else {
+                                let result = {
+                                    "status": "200",
+                                    "success": true
+                                }
+                                result.c2 = rows;
+                                console.log(rows);
+                                res.json(result);
+                            }
+                        });
                     }
                 });
             }
@@ -269,5 +308,6 @@ exports.gethomelist = gethomelist;
 exports.getpagedetail = getpagedetail;
 exports.changestatus1 = changestatus1;
 exports.changestatus2 = changestatus2;
+exports.getshoucanglist = getshoucanglist;
 
 

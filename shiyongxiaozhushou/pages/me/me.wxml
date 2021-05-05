@@ -15,10 +15,11 @@
 
 <view class="me">
   <view class="me_item">
-     <image class="me_img" src="/images/me/shoucang.png"></image>
-     <image class="jiantou" src="/images/me/jiantou.png"></image>
-     <view class="me_txt">收藏</view>
-     
+    <navigator url="/pages/article/article2">
+      <image class="me_img" src="/images/me/shoucang.png"></image>
+      <image class="jiantou" src="/images/me/jiantou.png"></image>
+      <view class="me_txt">收藏</view>
+    </navigator>
   </view>
   <view class="me_item">
      <image class="me_img" src="/images/me/message.png"></image>

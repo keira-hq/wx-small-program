@@ -13,22 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let that = this;
-    wx.request({
-      url: 'https://20210330.keirahq.com/gethomelist',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success(res){
-        console.log("首页取数据成功")
-        console.log(res.data)
-        that.setData({
-          datalist: res.data.data
-        })
-      },
-    })
     
-  
   },
   goDetail(event){
     console.log("点击事件")
@@ -49,7 +34,20 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let that = this;
+    wx.request({
+      url: 'https://20210330.keirahq.com/gethomelist',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res){
+        console.log("首页取数据成功")
+        console.log(res.data)
+        that.setData({
+          datalist: res.data.data
+        })
+      },
+    })
   },
 
   /**

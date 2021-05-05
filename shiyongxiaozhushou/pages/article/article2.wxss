@@ -1,1 +1,43 @@
-/* pages/article/article2.wxss */
+.account_img{
+  float:right;
+  margin-right:100rpx;
+}
+.body{
+  position:absolute;
+  top:250rpx;
+  bottom:0rpx;
+  overflow-y:scroll;
+}
+.article{
+  height:170rpx;
+  box-sizing: border-box;
+  border-radius:0rpx;
+  margin-top: 10rpx;
+  border-bottom:1rpx solid grey;
+  display: flex;
+  box-shadow: 0rpx 0rpx 0rpx #808080;
+}
+
+.article_img{
+  width:130rpx;
+  height:130rpx;
+  margin:30rpx 60rpx 0rpx 30rpx;
+}
+.article_title{
+  font-size:1.1em;
+  font-weight:400;
+  color:#2c2c2c;
+  margin-bottom:30rpx;
+  /* border:1rpx solid black; */
+}
+.article_txt{
+  /* background-color: violet; */
+  margin-top:30rpx;
+  margin-left:20rpx;
+}
+
+.article_detail{
+  color:#808080;
+  font-size:0.85rem;
+}
+

@@ -39,6 +39,8 @@ app.post('/getopenid', fun.getOpenId)
 app.get('/gethomelist', fun.gethomelist)
 //获取文章列表
 app.get('/getpagelist', fun.getpagelist)
+//获取收藏列表
+app.get('/getshoucanglist',fun.getshoucanglist)
 //获取具体的文章内容
 app.get('/getpagedetail', fun.getpagedetail)
 //改变收藏状态

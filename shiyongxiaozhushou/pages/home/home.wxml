@@ -11,7 +11,7 @@
   </view>
 
   <view class="banner">
-    <navigator url="../page1/page1?classid=1" ><image class="banner_img" src="/images/banner.png"></image></navigator>
+    <navigator url="../page1/page1?classid=1" hover-class="navigator-hover" ><image class="banner_img" src="/images/banner.png"></image></navigator>
   </view>
 </view>
     
@@ -27,7 +27,7 @@
         <view class="article_txt">
           <view class="article_title">{{item.title}}</view> 
           <view class="article_date">{{item.date}}</view> 
-          <view class="view">阅读:1{{item.view_sum}}</view>
+          <view class="view">阅读:{{item.view_sum}}</view>
         </view>
       </view>   
     </block>

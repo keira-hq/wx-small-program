@@ -44,7 +44,8 @@ Page({
 
   clickMe(c1){
     console.log("点赞前:"+shoucang)
-    this.setData({
+    let that = this
+    that.setData({
       imgUrl:shoucang==1?"../../images/shoucang-no.png":"../../images/shoucang-yes.png"
     })
     shoucang = Math.abs(shoucang-1)
@@ -62,14 +63,18 @@ Page({
         articleid:c1.currentTarget.dataset.articleid
       },
       success(res){
-        console.log("改变收藏状态成功：",res.data)
+        console.log("改变收藏状态成功：",res.data.c1[0])
+        that.setData({
+          detail: res.data.c1[0],
+        })
       },
     })
   },
 
 //点赞
   clickMe2(c2){
-    this.setData({
+    let that=this
+    that.setData({
       dianzanUrl:dianzan==1?"../../images/dianzan-no.png":"../../images/dianzan-yes.png"
     })
     dianzan = Math.abs(dianzan-1)
@@ -85,6 +90,9 @@ Page({
       },
       success(res){
         console.log("改变点赞状态成功：",res.data)
+        that.setData({
+          detail: res.data.c2[0]
+        })
       },
     })
   }

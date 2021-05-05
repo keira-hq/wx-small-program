@@ -30,6 +30,6 @@
   font-weight:500;
   color:#808080;
   display: inline;
-  padding-left:60rpx;
+  padding-left:40rpx;
   /* background-color: yellow; */
 }

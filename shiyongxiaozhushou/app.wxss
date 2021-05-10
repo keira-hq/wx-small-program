@@ -46,11 +46,6 @@
   box-sizing: border-box;
 }
 
-.navigator-hover {
-  color:blue;
-}
-
-
 .article_area{
   width:650rpx;
 }
@@ -87,10 +82,9 @@
   /* background-color: yellow; */
 }
 
-.favorites{
-  width:35rpx;
-  height:31rpx;
-  /* border:1rpx solid black; */
-  margin-left:130rpx;
+.navigator-hover{
+  background-color:white; opacity: 0.4;
+  color:black;
 }
+
 

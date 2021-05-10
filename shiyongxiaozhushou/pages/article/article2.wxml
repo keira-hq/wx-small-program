@@ -9,6 +9,7 @@
   <view class="account_img">
     <image class="assisstant_img" src="/images/home/people.png"></image> 
   </view>
+
   <view class="search-box">
     <input class="input" type="text" placeholder="search"/>
   </view>
@@ -23,7 +24,7 @@
       <view class="article_txt">
         <view class="article_title"> {{item.title}}</view>
         <view class="article_detail">
-          <view class="detail_txt">{{item.yuanchuang}}:{{item.author}}</view>
+          <view class="detail_txt">{{item.date}}</view>
         </view>
       </view>
     </view>

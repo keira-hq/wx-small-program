@@ -18,7 +18,7 @@
 }
 .me_item{
   height:110rpx;
-  border-bottom:1rpx solid grey;
+  border-bottom:1rpx solid gray;
 }
 
 .me_img{
